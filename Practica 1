@@ -1,0 +1,37 @@
+/******************************************************************************
+Practica 1
+Nombre: Elisa Michelle Medina Vázquez
+Fecha: 31122
+*******************************************************************************/
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        double monto_de_compra, monto_final, porcentaje_de_descuento, descuento;
+        System.out.print("Ingresa el valor de monto de compra: ");
+        monto_de_compra = in.nextDouble();
+        in.nextLine();
+        porcentaje_de_descuento=0;
+        if(monto_de_compra<=500)
+        System.out.println( " No hay descuento " );
+          porcentaje_de_descuento=0.0;
+        if(monto_de_compra>=501&&monto_de_compra<1000)
+            porcentaje_de_descuento=0.5;
+        if(monto_de_compra>=1001&&monto_de_compra<7000)
+            porcentaje_de_descuento=0.11;
+        if(monto_de_compra>=7000&&monto_de_compra<15000)
+            porcentaje_de_descuento=0.25;
+        descuento=porcentaje_de_descuento*monto_de_compra;
+        monto_final=monto_de_compra-descuento;
+        System.out.println("Valor de monto final: " + monto_final);
+        System.out.println("Valor de porcentaje de descuento: " + porcentaje_de_descuento);
+    }
+
+}
+
+
+
+
+
